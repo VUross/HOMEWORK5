@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Domaci 05 02</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="home0502.css">
+  </head>
+	<body>
+<body>
+  <div style="text-align: center;">
+    <h1>RAZLIKE IZMEDJU:</h1>
+    <h3><em>display: none(ukloni)</em> i <em>visibility: hidden(sakrij)</em><br> i naravno reset(display:block i visibility:visible)</h3>
+  </div>
+  <article style="margin-left: 20%; margin-top: 5%">
+    <!--prvi slajd-->
+    <div class="imgbox" id="imgbox1">vocka<br>
+      <img src="vocka.jpg" alt="Vocka" style="width:100%; border-radius: 30%">
+      <textarea rows=3 cols=20 style="font-family: arial; font-size: 10px; color:orange; border-radius: 20%">Malo teksta lorem ipsum, al i prvi...
+      </textarea>     
+      <button onclick="UkloniApsolutno()">-ukloni-</button>
+    </div>
+    <!--drugi slajd-->
+    <div class="imgbox" id="imgbox2">vezba<br>
+      <img src="vezbica.jpg" alt="Vezba" style="width:100%; border-radius: 30%">
+      <textarea rows=3 cols=20 style="font-family: arial; font-size: 10px; color:gold; border-radius: 20%">Svaku rec tumacim kao drugi...
+      </textarea>
+      <button onclick="SakrivenPrisutan()">-sakrij-</button>
+    </div>
+    <!--treci slajd-->
+    <div class="imgbox">plan<br>
+      <img src="planic.jpg" alt="Plan" style="width:100%; border-radius: 30%">
+      <textarea rows=3 cols=20 style="font-family: arial; font-size: 10px; color:gray; border-radius: 20%">Poneka slika malo reci evo ga i treci...</textarea>
+      <button onclick="ResetujSve()">-vrati sve-</button>
+    </div>
+  </article>
+
+<script>
+  function UkloniApsolutno() {
+      document.getElementById("imgbox1").style.display = "none";}
+
+  function SakrivenPrisutan() {
+      document.getElementById("imgbox2").style.visibility = "hidden";}
+
+  function ResetujSve() {
+      document.getElementById("imgbox1").style.display = "block";
+      document.getElementById("imgbox2").style.visibility = "visible";}
+</script>
+
+</body>
+</html>
